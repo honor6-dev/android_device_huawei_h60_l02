@@ -1,0 +1,9 @@
+on boot
+# ril daemon for second sim card
+service ril-daemon1 /system/bin/rild -c 1
+    class main
+    socket rild1 stream 660 root radio
+    socket rild-debug1 stream 660 radio system
+    socket rild-balong-test stream 660 radio system
+    user root
+    group radio cache inet misc audio sdcard_r sdcard_rw log dsm
