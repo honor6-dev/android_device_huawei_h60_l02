@@ -2,6 +2,9 @@ on boot
 ## Daemon processes to be run by init.
 ##
 
+on property:rild.rild1_ready_to_start=true
+    start ril-daemon1
+
 # ril daemon for second sim card
 service ril-daemon1 /system/bin/rild -c 1
     class main
@@ -9,3 +12,4 @@ service ril-daemon1 /system/bin/rild -c 1
     socket rild-debug1 stream 660 radio system
     user root
     group radio cache inet misc audio sdcard_rw qcom_oncrpc qcom_diag log
+    disabled
