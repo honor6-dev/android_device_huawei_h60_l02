@@ -27,7 +27,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=HuaweiMSimRIL \
     persist.radio.multisim.config=dsda
 
 # Include non-opensource parts
