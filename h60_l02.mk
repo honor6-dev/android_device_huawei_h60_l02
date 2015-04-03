@@ -26,8 +26,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.variant.rc:root/init.variant.rc
 
 # RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsda
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.radio.multisim.config=dsda
 
 # Include non-opensource parts
 $(call inherit-product, vendor/huawei/h60_l02/h60_l02-vendor.mk)
